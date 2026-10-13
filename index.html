@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triplos y Cuádruplos</title>
+    <link rel="stylesheet" href="public/css/b5.css">
+    <link rel="stylesheet" href="public/css/main.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5" style="max-width: 900px;">
+        <div class="card shadow-sm p-4 mb-4 border-0">
+            <h3 class="text-center mb-4 fw-bold">Triplos y Cuádruplos</h3>
+            
+            <div class="mb-3">
+                <label for="expresion" class="form-label fw-semibold">Operación matemática:</label>
+                <input type="text" id="expresion" class="form-control form-control-lg font-monospace" placeholder="Ej: (2 + 3) * 4 o r = a + (b - c) * d">
+            </div>
+
+            <div id="seccion-variables" class="mb-3 d-none">
+                <label class="form-label fw-semibold">Valores de variables:</label>
+                <div id="contenedor-variables" class="d-flex flex-wrap gap-2 p-2 bg-light border rounded"></div>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button id="btn-calcular" class="btn btn-primary btn-lg flex-grow-1">Calcular</button>
+                <button id="btn-limpiar" class="btn btn-secondary btn-lg px-4">Limpiar</button>
+            </div>
+
+            <div id="mensaje-error" class="alert alert-danger mt-3 d-none mb-0"></div>
+        </div>
+
+        <div id="area-resultados" class="d-none">
+            <div class="alert alert-success fs-4 text-center fw-bold font-monospace shadow-sm mb-4" id="res-final"></div>
+
+            <div class="row g-4">
+                <div class="col-md-7">
+                    <div class="card shadow-sm p-3 border-0 h-100">
+                        <h5 class="fw-bold mb-3 text-primary">Cuádruplos</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm text-center align-middle font-monospace mb-0">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Operador</th>
+                                        <th>Arg 1</th>
+                                        <th>Arg 2</th>
+                                        <th>Resultado</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-cuadruplos"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="card shadow-sm p-3 border-0 h-100">
+                        <h5 class="fw-bold mb-3 text-secondary">Triplos</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm text-center align-middle font-monospace mb-0">
+                                <thead class="table-secondary">
+                                    <tr>
+                                        <th>Puntero</th>
+                                        <th>Operador</th>
+                                        <th>Arg 1</th>
+                                        <th>Arg 2</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-triplos"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="public/js/index.js"></script>
+</body>
+</html>
